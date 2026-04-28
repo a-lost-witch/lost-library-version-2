@@ -169,6 +169,7 @@ body {
 .card:hover {
     transform: translateY(-5px) scale(1.02);
     border-color: #8c7a5b;
+    filter: brightness(1.4) contrast(1.1);
 }
 
 /* overlay gets lighter on hover */
@@ -177,7 +178,6 @@ body {
         to top,
         rgba(0,0,0,0.2),
         rgba(0,0,0,0)
-        filter: brightness(1.2) contrast(1.05);
     );
 }
 
