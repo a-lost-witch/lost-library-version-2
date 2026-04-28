@@ -45,14 +45,39 @@ body {
 }
 
 /* Hero */
+.hero {
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+
+    /* IMAGE */
+    background: linear-gradient(
+        to right,
+        rgba(15,15,15,0.95) 40%,
+        rgba(15,15,15,0.6) 70%,
+        rgba(15,15,15,0.2)
+    ),
+    url("images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+/* TEXT stays readable */
+.hero-text {
+    max-width: 500px;
+    z-index: 2;
+}
+
 .hero h2 {
-    font-family: 'Playfair Display', serif;
     font-size: 42px;
+    font-family: 'Playfair Display', serif;
 }
 
 .hero p {
     color: #aaa;
-    margin-top: 10px;
 }
 
 /* Quote */
