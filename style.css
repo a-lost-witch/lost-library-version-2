@@ -99,46 +99,88 @@ body {
     padding-left: 20px;
 }
 
-/* Cards */
+/* Cards layout */
 .cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     margin-top: 60px;
 }
-/* styles each individual box */
+
+/* IMAGE CARD */
 .card {
-    padding: 25px;
-    background: #181818;
+    position: relative;
+    height: 220px;
     border: 1px solid #2a2a2a;
+    overflow: hidden;
+
+    /* image settings */
+    background-size: cover;
+    background-position: center;
+
     transition: 0.4s;
-    position: relative;
 }
 
-/* subtle glow on hover */
-.card:hover {
-    background: #1f1f1f;
-    border-color: #8c7a5b;
-    transform: translateY(-5px);
+/* DARK OVERLAY */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.85),
+        rgba(0,0,0,0.4)
+    );
+    transition: 0.4s;
 }
 
-/* aesthetic underline */
-.card h3 {
+/* TEXT container */
+.overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 2;
+}
+
+/* heading */
+.overlay h3 {
     font-family: 'Playfair Display', serif;
-    margin-bottom: 10px;
-    position: relative;
+    margin-bottom: 8px;
 }
 
-.card h3::after {
+/* underline */
+.overlay h3::after {
     content: "";
     display: block;
     width: 30px;
     height: 1px;
     background: #8c7a5b;
-    margin-top: 8px;
+    margin-top: 6px;
 }
 
-/* for mobile */
+/* text */
+.overlay p {
+    font-size: 14px;
+    color: #d6cbb0;
+}
+
+/* HOVER EFFECT */
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    border-color: #8c7a5b;
+}
+
+/* overlay gets lighter on hover */
+.card:hover::before {
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.2)
+    );
+}
+
+/* mobile */
 @media (max-width: 768px) {
     .cards {
         grid-template-columns: 1fr;
