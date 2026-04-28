@@ -51,24 +51,23 @@ body {
     display: flex;
     align-items: center;
     padding-left: 40px;
-    
-/*attempting a golden border */
-    .hero {
     border: 1px solid rgba(200,170,120,0.2);
+    margin: 20px;
 }
-.hero::after {
+.hero::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle, transparent 60%, rgba(0,0,0,0.6));
+    border: 1px solid rgba(212,175,55,0.6);
+}
 }    
 
     /* IMAGE */
     background: linear-gradient(
         to right,
-        rgba(15,15,15,0.95) 40%,
-        rgba(15,15,15,0.6) 70%,
-        rgba(15,15,15,0.2)
+         rgba(15,15,15,0.85) 35%,
+    rgba(15,15,15,0.5) 65%,
+    rgba(15,15,15,0.2) 100%
     ),
     url("https://a-lost-witch.github.io/lost-library-version-2/image.png");
 
