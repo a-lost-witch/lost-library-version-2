@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Lost Library</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body{
+margin:0;
+font-family: Georgia, serif;
+color:#e8dcc0;
+background:#0f0f0f;
+}
+
+/* 🕯️ HERO SECTION */
+.hero{
+position: relative;
+height: 100vh;
+background: url('library.jpg') center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.65);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:700px;
+padding:20px;
+}
+
+.hero h1{
+font-size:60px;
+color:#c2a878;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:20px;
+line-height:1.6;
+}
+
+/* ✨ Button */
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:10px 20px;
+border:1px solid #c2a878;
+color:#c2a878;
+text-decoration:none;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#c2a878;
+color:black;
+}
+
+/* 📚 SECTION */
+.section{
+padding:60px 20px;
+max-width:1000px;
+margin:auto;
+}
+
+.section h2{
+color:#c2a878;
+margin-bottom:20px;
+}
+
+/* 📜 Cards */
+.card{
+background:#1a1612;
+padding:20px;
+margin:20px 0;
+border:1px solid #3a3a3a;
+}
+
+/* ✨ Split layout */
+.split{
+display:flex;
+gap:30px;
+align-items:center;
+margin:60px 0;
+}
+
+.split img{
+width:100%;
+border-radius:5px;
+}
+
+.split div{
+flex:1;
+}
+
+/* 📱 Mobile */
+@media(max-width:768px){
+
+.hero h1{
+font-size:36px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.split{
+flex-direction:column;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- 🕯️ HERO -->
+<header class="hero">
+
+<div class="overlay"></div>
+
+<div class="hero-content">
+<h1>Lost Library</h1>
+<p>For the curious and the studious.  
+A space for stories, films, and quiet contemplation.</p>
+
+<a href="#books" class="btn">Enter the Library</a>
+</div>
+
+</header>
+
+<!-- 📚 BOOK SECTION -->
+<section class="section" id="books">
+
+<h2>📚 Books</h2>
+
+<div class="card">
+<p>The Secret History – Donna Tartt</p>
+<p>If We Were Villains – M.L. Rio</p>
+<p>The Picture of Dorian Gray – Oscar Wilde</p>
+</div>
+
+</section>
+
+<!-- 🎬 SPLIT SECTION (like reference site) -->
+<section class="section">
+
+<div class="split">
+
+<div>
+<h2>Journal</h2>
+<p>Essays and reflections on literature, solitude, and knowledge.</p>
+</div>
+
+<div>
+<img src="book.jpg">
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>
