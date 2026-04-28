@@ -113,19 +113,46 @@ body {
 
 /* Cards */
 .cards {
-    display: flex;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 25px;
     margin-top: 60px;
 }
-
+/* styles each individual box */
 .card {
-    flex: 1;
-    padding: 20px;
+    padding: 25px;
     background: #181818;
     border: 1px solid #2a2a2a;
-    transition: 0.3s;
+    transition: 0.4s;
+    position: relative;
 }
 
+/* subtle glow on hover */
 .card:hover {
     background: #1f1f1f;
+    border-color: #8c7a5b;
+    transform: translateY(-5px);
+}
+
+/* aesthetic underline */
+.card h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.card h3::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 1px;
+    background: #8c7a5b;
+    margin-top: 8px;
+}
+
+/* for mobile */
+@media (max-width: 768px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
 }
