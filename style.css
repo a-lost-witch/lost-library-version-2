@@ -44,23 +44,36 @@ body {
     padding: 60px;
 }
 
-/* Hero */
+/* Hero (the 1st card) */
 .hero {
     position: relative;
     height: 400px;
     display: flex;
     align-items: center;
     padding-left: 40px;
-    border: 1px solid rgba(200,170,120,0.2);
     margin: 20px;
+
+    /* BACKGROUND IMAGE top right */
+    background: linear-gradient(
+        to right,
+        rgba(15,15,15,0.85) 35%,
+        rgba(15,15,15,0.5) 65%,
+        rgba(15,15,15,0.2) 100%
+    ),
+    url("https://a-lost-witch.github.io/lost-library-version-2/image.png");
+
+    background-size: cover;
+    background-position: center;
 }
+
+/* GOLD BORDER*/
 .hero::before {
     content: "";
     position: absolute;
     inset: 0;
     border: 1px solid rgba(212,175,55,0.6);
+    pointer-events: none;
 }
-}    
 
     /* IMAGE */
     background: linear-gradient(
