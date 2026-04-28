@@ -55,6 +55,15 @@ body {
     margin-top: 10px;
 }
 
+.hero::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 1px;
+    background: #8c7a5b;
+    margin-top: 20px;
+}
+
 /* Quote */
 .quote {
     margin-top: 60px;
