@@ -51,10 +51,17 @@ body {
     display: flex;
     align-items: center;
     padding-left: 40px;
-
+    
+/*attempting a golden border */
     .hero {
     border: 1px solid rgba(200,170,120,0.2);
 }
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, transparent 60%, rgba(0,0,0,0.6));
+}    
 
     /* IMAGE */
     background: linear-gradient(
