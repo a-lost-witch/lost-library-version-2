@@ -44,7 +44,7 @@ body {
     padding: 60px;
 }
 
-/* Hero (the 1st card) */
+/* Hero (the top card) */
 .hero {
     position: relative;
     height: 400px;
@@ -75,18 +75,6 @@ body {
     pointer-events: none;
 }
 
-    /* IMAGE */
-    background: linear-gradient(
-        to right,
-         rgba(15,15,15,0.85) 35%,
-    rgba(15,15,15,0.5) 65%,
-    rgba(15,15,15,0.2) 100%
-    ),
-    url("https://a-lost-witch.github.io/lost-library-version-2/image.png");
-
-    background-size: cover;
-    background-position: center;
-}
 
 /* TEXT stays readable */
 .hero-text {
